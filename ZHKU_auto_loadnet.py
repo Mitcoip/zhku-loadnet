@@ -5,6 +5,8 @@ import os
 import datetime
 
 def load():
+    userId = ''
+    passwd = ''
     Url = 'http://1.1.1.1:8888/webauth.do?wlanacip=192.16.99.2&wlanacname=zkbras1&wlanuserip=10.40.180.95&mac=60:18:95:46:08:7d&vlan=3856&url=http://1.1.1.1'
 
     header = {
@@ -32,6 +34,9 @@ def load():
     'userId': '',
     'passwd': ''
     }
+
+    data['userId'] = userId
+    data['passwd'] = passwd
 
     while(1):
         r = run('ping www.baidu.com',
